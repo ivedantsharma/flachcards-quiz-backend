@@ -26,12 +26,6 @@ db.connect((err) => {
   console.log("Connected to database.");
 });
 
-// api/backend.js
-module.exports = (req, res) => {
-  // Your existing code
-  res.send("Hello from backend!");
-};
-
 // Get All FlashCard
 app.get("/api/flashcards", (req, res) => {
   db.query("SELECT * FROM flashcards", (err, results) => {
